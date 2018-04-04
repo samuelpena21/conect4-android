@@ -357,19 +357,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Runnable changeColor = new Runnable() {
             @Override
             public void run() {
+
                 if (turno) {
                     writeTurn(turno);
                     soltarRoja(board, column);
-                    if (!checkWinner(board)) {
+                    if (checkWinner(board) != false){
                         if (checkWinner(board))
                             Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
+
                     }
 
                     turno = false;
                 } else {
                     writeTurn(turno);
                     soltarAzul(board, column);
-                    if (!checkWinner(board)) {
+                    if (checkWinner(board) != false) {
                         if (checkWinner(board))
                             Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
                     }

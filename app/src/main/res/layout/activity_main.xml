@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:text="@string/blue_turn"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/conect"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -195,7 +195,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
-       
+
             tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
