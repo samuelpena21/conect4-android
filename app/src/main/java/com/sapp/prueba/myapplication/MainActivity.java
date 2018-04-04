@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView txtInformacion;
 
     Button buton;
+
+
+
     boolean turno = false;
     int column = 0;
 
