@@ -1,5 +1,7 @@
 package com.sapp.prueba.myapplication;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+MediaPlayer reproducir;
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
             imageView1_0, imageView1_1, imageView1_2, imageView1_3, imageView1_4, imageView1_5, imageView1_6,
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView txtInformacion;
 
     Button buton;
-
+Button reset;
 
 
     boolean turno = false;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         //Referencia de todos los ImageVIews del cuadro
         //Cada ficha es un ImageView
@@ -139,9 +143,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
 
 
+        reproducir=MediaPlayer.create(this,R.raw.musica);
+        reproducir.setLooping(true);
+        reproducir.start();}
 
+
+    protected void onStop(){
+        super.onStop();
+        reproducir.pause();
 
     }
+
+    protected void onRestart(){
+        super.onRestart();
+        reproducir.start();
+
+      
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -469,7 +488,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             txtInformacion.setText(R.string.blue_turn);
         }
+
     }
+
+
 }
 
 

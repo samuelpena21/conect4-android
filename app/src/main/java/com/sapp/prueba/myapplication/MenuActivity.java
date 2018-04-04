@@ -41,6 +41,7 @@ info.setOnClickListener(new View.OnClickListener() {
         reproducir.setLooping(true);
         reproducir.start();}
 
+
         protected void onStop(){
         super.onStop();
          reproducir.pause();
