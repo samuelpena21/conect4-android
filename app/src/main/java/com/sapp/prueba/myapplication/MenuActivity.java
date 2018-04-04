@@ -40,5 +40,6 @@ info.setOnClickListener(new View.OnClickListener() {
         reproducir=MediaPlayer.create(this,R.raw.musica);
         reproducir.setLooping(true);
         reproducir.start();
+
     }
 }
