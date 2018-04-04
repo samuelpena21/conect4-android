@@ -430,7 +430,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return true;
             }
         }
-        //Diagonal de izquierda a derecha
+        //Diagonal de izquierdaaa a derechaaa
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 4; j++) {
                 if ((board[i][j] != 0)
