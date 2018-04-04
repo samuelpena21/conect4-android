@@ -23,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Turno del Jugador 1"
+            android:text="@string/blue_turn"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
@@ -36,7 +36,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Reset"
+        android:text="@string/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
@@ -69,7 +69,7 @@
             android:layout_marginLeft="7dp"
 
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-1"
@@ -78,7 +78,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-2"
@@ -87,7 +87,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-3"
@@ -96,7 +96,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-4"
@@ -105,7 +105,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-5"
@@ -114,7 +114,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView0-6"
@@ -123,7 +123,7 @@
             android:layout_margin="4dp"
             android:layout_marginLeft="7dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-0"
@@ -133,7 +133,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-1"
@@ -143,7 +143,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
 
         <ImageView
@@ -154,7 +154,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-3"
@@ -164,7 +164,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-4"
@@ -174,7 +174,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-5"
@@ -184,7 +184,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView1-6"
@@ -194,7 +194,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-0"
@@ -204,7 +204,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-1"
@@ -214,7 +214,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
 
         <ImageView
@@ -226,7 +226,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-3"
@@ -236,7 +236,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-4"
@@ -246,7 +246,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-5"
@@ -256,7 +256,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView2-6"
@@ -266,7 +266,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-0"
@@ -276,7 +276,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-1"
@@ -286,7 +286,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
 
         <ImageView
@@ -297,7 +297,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-3"
@@ -307,7 +307,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-4"
@@ -317,7 +317,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-5"
@@ -327,7 +327,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView3-6"
@@ -337,7 +337,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="4dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-0"
@@ -347,7 +347,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-1"
@@ -357,7 +357,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
 
         <ImageView
@@ -368,7 +368,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-3"
@@ -378,7 +378,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-4"
@@ -388,7 +388,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-5"
@@ -398,7 +398,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView4-6"
@@ -408,7 +408,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="3dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-0"
@@ -418,7 +418,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-1"
@@ -428,7 +428,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
 
         <ImageView
@@ -439,7 +439,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-3"
@@ -449,7 +449,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-4"
@@ -459,7 +459,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-5"
@@ -469,7 +469,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
         <ImageView
             android:id="@+id/imageView5-6"
@@ -479,7 +479,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginTop="2dp"
             app:srcCompat="@drawable/ficha_blanca"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription" android:layout_marginStart="7dp"/>
 
     </GridLayout>
 
