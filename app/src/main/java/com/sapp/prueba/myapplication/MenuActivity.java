@@ -39,7 +39,20 @@ info.setOnClickListener(new View.OnClickListener() {
     //musica de fondo
         reproducir=MediaPlayer.create(this,R.raw.musica);
         reproducir.setLooping(true);
-        reproducir.start();
+        reproducir.start();}
+
+        protected void onStop(){
+        super.onStop();
+         reproducir.pause();
+
+        }
+
+    protected void onRestart(){
+            super.onRestart();
+            reproducir.start();
 
     }
-}
+
+        }
+
+
