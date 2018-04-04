@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Connect 4</string>
+    <string name="red_wins">Ha ganado el jugador Rojo</string>
+    <string name="blue_wins">Ha ganado el jugador Azul</string>
+    <string name="red_turn">Turno del Jugador 2</string>
+    <string name="blue_turn">Turno del Jugador 1</string>
 </resources>

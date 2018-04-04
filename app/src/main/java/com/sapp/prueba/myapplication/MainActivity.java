@@ -2,11 +2,8 @@ package com.sapp.prueba.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -358,20 +355,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 if (turno) {
-                    escribirTurno(turno);
+                    writeTurn(turno);
                     soltarRoja(board, column);
-                    if (chequearGanador(board) != false) {
-                        if (chequearGanador(board) == true)
-                            Toast.makeText(MainActivity.this, "Ha ganado el jugador Rojo", Toast.LENGTH_SHORT).show();
+                    if (!checkWinner(board)) {
+                        if (checkWinner(board))
+                            Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
                     }
 
                     turno = false;
                 } else {
-                    escribirTurno(turno);
+                    writeTurn(turno);
                     soltarAzul(board, column);
-                    if (chequearGanador(board) != false) {
-                        if (chequearGanador(board) == true)
-                            Toast.makeText(MainActivity.this, "Ha ganado el jugador Azul", Toast.LENGTH_SHORT).show();
+                    if (!checkWinner(board)) {
+                        if (checkWinner(board))
+                            Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
                     }
                     turno = true;
                 }
@@ -403,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //El algoritmo del connect 4 en java es de:
     //http://www.javaproblems.com/2013/01/creating-connect-four-game-in-java.html
-    public boolean chequearGanador(int[][] board) {
+    public boolean checkWinner(int[][] board) {
         //Horizontal
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j <4; j++) {
@@ -459,13 +456,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return false;
     }
 
-    public void escribirTurno(boolean turno) {
+    public void writeTurn(boolean turno) {
         if(!turno){
-            txtInformacion.setText("Turno del Jugador 2");
+            txtInformacion.setText(R.string.red_turn);
         }
         else {
 
-            txtInformacion.setText("Turno del Jugador 1");
+            txtInformacion.setText(R.string.blue_turn);
         }
     }
 }
