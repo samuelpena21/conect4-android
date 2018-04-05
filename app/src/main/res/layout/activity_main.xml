@@ -9,7 +9,7 @@
     >
 
     <Button
-        android:id="@+id/home"
+        android:id="@+id/botonhome"
         android:layout_width="42dp"
         android:layout_height="40dp"
         android:layout_weight="1"

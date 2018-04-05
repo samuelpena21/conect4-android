@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 MediaPlayer reproducir;
 
+
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
             imageView1_0, imageView1_1, imageView1_2, imageView1_3, imageView1_4, imageView1_5, imageView1_6,
             imageView2_0, imageView2_1, imageView2_2, imageView2_3, imageView2_4, imageView2_5, imageView2_6,
@@ -22,7 +23,7 @@ MediaPlayer reproducir;
     TextView txtInformacion;
 
     Button buton;
-    Button btnhome;
+
 Button reset;
 
 
@@ -32,18 +33,19 @@ Button reset;
     int[][] board = new int[6][7];
     ImageView[][] boardImagenes;
 
-
+    Button btnhome;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-btnhome= findViewById(R.id.home);
-btnhome.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent btnhome = new Intent(MainActivity.this,MenuActivity.class);
-    }
-});
+//boton home
+        btnhome= findViewById(R.id.botonhome);
+        btnhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent btnhome = new Intent(MainActivity.this,MenuActivity.class);
+                startActivity(btnhome);
+            }
+        });
 
         //Referencia de todos los ImageVIews del cuadro
         //Cada ficha es un ImageView
