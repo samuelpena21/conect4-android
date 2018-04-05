@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication5.iml" filepath="$PROJECT_DIR$/MyApplication5.iml" />
       <module fileurl="file://C:\Users\dell\Documents\GitHub\conect4-android\MyApplication5.iml" filepath="C:\Users\dell\Documents\GitHub\conect4-android\MyApplication5.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\dell\Documents\GitHub\conect4-android\app\app.iml" filepath="C:\Users\dell\Documents\GitHub\conect4-android\app\app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/conect4-android.iml" filepath="$PROJECT_DIR$/conect4-android.iml" />
+      <module fileurl="file://C:\Users\samuel\Documents\AndroidProjects\MyApplication5\conect4-android.iml" filepath="C:\Users\samuel\Documents\AndroidProjects\MyApplication5\conect4-android.iml" />
     </modules>
   </component>
 </project>
