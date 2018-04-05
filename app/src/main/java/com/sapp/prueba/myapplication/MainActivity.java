@@ -28,25 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     boolean turno = false;
-    int column = 0;
 
-    int[][] board = new int[6][7];
-    ImageView[][] boardImagenes;
-
+    int column = 0; //Variable que dice que columna se esta presionando
+    int[][] board = new int[6][7]; //Matriz que hace los calculos numericos
+    ImageView[][] boardImagenes; //Matriz con la imagenes
     Button btnhome;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//boton home
-        btnhome = findViewById(R.id.botonhome);
-        btnhome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(btnhome);
-            }
-        });
+
 
         //Referencia de todos los ImageVIews del cuadro
         //Cada ficha es un ImageView
@@ -95,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         buton = findViewById(R.id.button);
+        btnhome = findViewById(R.id.botonhome);
         txtInformacion = findViewById(R.id.txtInformacion);
 
 
@@ -142,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView5_5.setOnClickListener(this);
         imageView5_6.setOnClickListener(this);
         buton.setOnClickListener(this);
+        btnhome.setOnClickListener(this);
 
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -370,6 +363,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 juego();
                 break;
             case R.id.bottom:
+
+                break;
+            case R.id.botonhome:
+                Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(btnhome);
 
                 break;
 
