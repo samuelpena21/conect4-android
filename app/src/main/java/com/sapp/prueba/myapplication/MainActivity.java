@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-MediaPlayer reproducir;
+    MediaPlayer reproducir;
 
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
@@ -24,7 +24,7 @@ MediaPlayer reproducir;
 
     Button buton;
 
-Button reset;
+    Button reset;
 
 
     boolean turno = false;
@@ -34,15 +34,16 @@ Button reset;
     ImageView[][] boardImagenes;
 
     Button btnhome;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //boton home
-        btnhome= findViewById(R.id.botonhome);
+        btnhome = findViewById(R.id.botonhome);
         btnhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent btnhome = new Intent(MainActivity.this,MenuActivity.class);
+                Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(btnhome);
             }
         });
@@ -152,18 +153,19 @@ Button reset;
         };
 
 
-        reproducir=MediaPlayer.create(this,R.raw.musica);
+        reproducir = MediaPlayer.create(this, R.raw.musica);
         reproducir.setLooping(true);
-        reproducir.start();}
+        reproducir.start();
+    }
 
 
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         reproducir.pause();
 
     }
 
-    protected void onRestart(){
+    protected void onRestart() {
         super.onRestart();
         reproducir.start();
 
@@ -389,7 +391,7 @@ Button reset;
                 if (turno) {
                     writeTurn(turno);
                     soltarRoja(board, column);
-                    if (checkWinner(board) != false){
+                    if (checkWinner(board) != false) {
                         if (checkWinner(board))
                             Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
 
@@ -436,8 +438,8 @@ Button reset;
     public boolean checkWinner(int[][] board) {
         //Horizontal
         for (int i = 0; i < 6; i++) {
-            for (int j = 0; j <4; j++) {
-                    if ((board[i][j] != 0)
+            for (int j = 0; j < 4; j++) {
+                if ((board[i][j] != 0)
                         && (board[i][j + 1] != 0)
                         && (board[i][j + 2] != 0)
                         && (board[i][j + 3] != 0)
@@ -450,7 +452,7 @@ Button reset;
         //Vertical i
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
-                    if ((board[j][i] != 0)
+                if ((board[j][i] != 0)
                         && (board[j + 1][i] != 0)
                         && (board[j + 2][i] != 0)
                         && (board[j + 3][i] != 0)
@@ -490,10 +492,9 @@ Button reset;
     }
 
     public void writeTurn(boolean turno) {
-        if(!turno){
+        if (!turno) {
             txtInformacion.setText(R.string.red_turn);
-        }
-        else {
+        } else {
 
             txtInformacion.setText(R.string.blue_turn);
         }
