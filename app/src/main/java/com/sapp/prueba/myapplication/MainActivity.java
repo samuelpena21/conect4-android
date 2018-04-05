@@ -22,6 +22,7 @@ MediaPlayer reproducir;
     TextView txtInformacion;
 
     Button buton;
+    Button btnhome;
 Button reset;
 
 
@@ -36,7 +37,13 @@ Button reset;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+btnhome= findViewById(R.id.home);
+btnhome.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent btnhome = new Intent(MainActivity.this,MenuActivity.class);
+    }
+});
 
         //Referencia de todos los ImageVIews del cuadro
         //Cada ficha es un ImageView
