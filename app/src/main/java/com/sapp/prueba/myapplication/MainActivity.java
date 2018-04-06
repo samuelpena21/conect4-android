@@ -362,8 +362,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 column = 6;
                 juego();
                 break;
-            case R.id.bottom:
-
+            case R.id.button:
+Intent  buton= new Intent(MainActivity.this, MainActivity.class);
+startActivity(buton);
                 break;
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
@@ -372,7 +373,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             default:
-                //Bueno que puedo yo decir \./
+                //Bueno que puedo yo decir \./ :v
                 break;
         }
 
