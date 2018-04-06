@@ -1,5 +1,6 @@
 package com.sapp.prueba.myapplication;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -392,7 +393,18 @@ startActivity(buton);
                     soltarRoja(board, column);
                     if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                            Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
+                        {
+                            AlertDialog.Builder mbuilder = new AlertDialog.Builder(MainActivity.this);
+                            View mview = getLayoutInflater().inflate(R.layout.redwin,null);
+                            Button reset = findViewById(R.id.button5);
+
+
+                            mbuilder.setView(mview);
+                            AlertDialog dialog = mbuilder.create();
+                            dialog.show();
+
+                        }
 
                     }
 
