@@ -1,6 +1,7 @@
 package com.sapp.prueba.myapplication;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buton;
 
     Button reset;
+    Context contexto;
 
 
     boolean turno = false;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        contexto = this;
         //Referencia de todos los ImageVIews del cuadro
         //Cada ficha es un ImageView
         imageView0_0 = findViewById(R.id.imageView0_0);
@@ -395,14 +397,17 @@ startActivity(buton);
                         if (checkWinner(board))
                            // Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
                         {
-                            AlertDialog.Builder mbuilder = new AlertDialog.Builder(MainActivity.this);
-                            View mview = getLayoutInflater().inflate(R.layout.redwin,null);
-                            Button reset = findViewById(R.id.button5);
+
+                            new cuadroDialog(contexto);
+                            /*AlertDialog.Builder mbuilder = new AlertDialog.Builder(MainActivity.this);
+                            View mview = getLayoutInflater().inflate(R.layout.activity_redwin,null);
+
+
 
 
                             mbuilder.setView(mview);
                             AlertDialog dialog = mbuilder.create();
-                            dialog.show();
+                            dialog.show();*/
 
                         }
 
@@ -414,7 +419,8 @@ startActivity(buton);
                     soltarAzul(board, column);
                     if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                            Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
+                            new cuadroDialogoAzul(contexto);
                     }
                     turno = true;
                 }
