@@ -366,8 +366,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 juego();
                 break;
             case R.id.button:
-Intent  buton= new Intent(MainActivity.this, MainActivity.class);
-startActivity(buton);
+                Intent buton = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(buton);
                 break;
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
@@ -391,19 +391,14 @@ startActivity(buton);
             public void run() {
 
                 if (turno) {
-                    writeTurn(turno);
                     soltarRoja(board, column);
                     if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                           // Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
                         {
 
                             new cuadroDialog(contexto);
                             /*AlertDialog.Builder mbuilder = new AlertDialog.Builder(MainActivity.this);
                             View mview = getLayoutInflater().inflate(R.layout.activity_redwin,null);
-
-
-
 
                             mbuilder.setView(mview);
                             AlertDialog dialog = mbuilder.create();
@@ -413,16 +408,13 @@ startActivity(buton);
 
                     }
 
-                    turno = false;
                 } else {
-                    writeTurn(turno);
                     soltarAzul(board, column);
                     if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                            //Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
                             new cuadroDialogoAzul(contexto);
                     }
-                    turno = true;
+
                 }
             }
         };
@@ -433,6 +425,8 @@ startActivity(buton);
     public void soltarRoja(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                writeTurn(turno);
+                turno = !turno;
                 board[i][column] = 1;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_roja);
                 break;
@@ -443,6 +437,8 @@ startActivity(buton);
     public void soltarAzul(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                writeTurn(turno);
+                turno = !turno;
                 board[i][column] = 2;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_azul);
                 break;
@@ -466,7 +462,7 @@ startActivity(buton);
                     return true;
             }
         }
-        //Vertical i
+        //Vertical
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
                 if ((board[j][i] != 0)

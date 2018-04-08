@@ -13,7 +13,8 @@ import android.widget.Button;
  */
 
 public class cuadroDialog {
-    public  cuadroDialog(final Context contexto){
+
+    public cuadroDialog(final Context contexto) {
 
         final Dialog dialogo = new Dialog(contexto);
         dialogo.setCancelable(false);
@@ -24,12 +25,12 @@ public class cuadroDialog {
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             dialogo.dismiss();
-                Intent intent = new Intent(contexto,MainActivity.class);
+                dialogo.dismiss();
+                Intent intent = new Intent(contexto, MainActivity.class);
                 contexto.startActivity(intent);
             }
         });
-dialogo.show();
+        //dialogo.show();
 
 
     }
