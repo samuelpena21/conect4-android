@@ -7,12 +7,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-/**
- * Created by dell on 07/04/2018.
- */
-
-public class cuadroDialogoAzul {
-    public  cuadroDialogoAzul(final Context contexto){
+class cuadroDialogAzul {
+    cuadroDialogAzul(final Context contexto){
 
         final Dialog dialogo = new Dialog(contexto);
         dialogo.setCancelable(false);

@@ -2,8 +2,8 @@
     <string name="app_name">Connect 4</string>
     <string name="red_wins">Ha ganado el jugador Rojo</string>
     <string name="blue_wins">Ha ganado el jugador Azul</string>
-    <string name="red_turn">Turno del Jugador 2</string>
-    <string name="blue_turn">Turno del Jugador 1</string>
+    <string name="red_turn">turno del jugador Rojo</string>
+    <string name="blue_turn">turno del jugador Azul</string>
     <string name="reset">Reset</string>
 
     <string name="Jugar">Jugar</string>
@@ -16,5 +16,6 @@
     <string name="obje3"> El ganador es aquel que hace la primera alineacion (horizontal, vertical o diagona) de 4 fichas de su color. si todos los espacios de la rejilla del juego
         se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.
     </string>
+    <string name="tie_game">Bueno parece que es un empate....</string>
 
 </resources>
