@@ -16,6 +16,6 @@
     <string name="obje3"> El ganador es aquel que hace la primera alineacion (horizontal, vertical o diagona) de 4 fichas de su color. si todos los espacios de la rejilla del juego
         se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.
     </string>
-    <string name="tie_game">Bueno parece que es un empate....</string>
+    <string name="tie_game">Bueno, parece que es un empate....</string>
 
 </resources>
