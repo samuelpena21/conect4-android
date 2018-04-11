@@ -1,6 +1,5 @@
 package com.sapp.prueba.myapplication;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer reproducir;
@@ -22,20 +20,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             imageView3_0, imageView3_1, imageView3_2, imageView3_3, imageView3_4, imageView3_5, imageView3_6,
             imageView4_0, imageView4_1, imageView4_2, imageView4_3, imageView4_4, imageView4_5, imageView4_6,
             imageView5_0, imageView5_1, imageView5_2, imageView5_3, imageView5_4, imageView5_5, imageView5_6;
-    TextView txtInformacion;
 
-    Button buton;
+    TextView txtInformacion; //muestra el turno del jugador en la parte de arriba de la pantalla
 
-    Button reset;
+    Button buton,btnhome;
     Context contexto;
 
 
-    boolean turno = false;
-
+    boolean turno = false; //variable que controla el turno del jugador: si es false es azul. si es true roja.
+    int totalMovimientos = 42;
     int column = 0; //Variable que dice que columna se esta presionando
     int[][] board = new int[6][7]; //Matriz que hace los calculos numericos
     ImageView[][] boardImagenes; //Matriz con la imagenes
-    Button btnhome;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -366,8 +363,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 juego();
                 break;
             case R.id.button:
-Intent  buton= new Intent(MainActivity.this, MainActivity.class);
-startActivity(buton);
+                Intent buton = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(buton);
                 break;
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
@@ -376,7 +373,8 @@ startActivity(buton);
                 break;
 
             default:
-                //Bueno que puedo yo decir \./ :v
+                //o\  /
+                //o \/
                 break;
         }
 
@@ -390,39 +388,31 @@ startActivity(buton);
             @Override
             public void run() {
 
-                if (turno) {
-                    writeTurn(turno);
-                    soltarRoja(board, column);
-                    if (checkWinner(board) != false) {
-                        if (checkWinner(board))
-                           // Toast.makeText(MainActivity.this, R.string.red_wins, Toast.LENGTH_SHORT).show();
-                        {
+                if (totalMovimientos > 0) {
+                    totalMovimientos --;
 
-                            new cuadroDialog(contexto);
-                            /*AlertDialog.Builder mbuilder = new AlertDialog.Builder(MainActivity.this);
-                            View mview = getLayoutInflater().inflate(R.layout.activity_redwin,null);
+                    if (turno) {
+                        soltarRoja(board, column);
+                        // if (checkWinner(board) != false) {
+                        if (checkWinner(board)) {
 
-
-
-
-                            mbuilder.setView(mview);
-                            AlertDialog dialog = mbuilder.create();
-                            dialog.show();*/
+                            new cuadroDialogRojo(contexto);
 
                         }
 
-                    }
+                        //  }
 
-                    turno = false;
-                } else {
-                    writeTurn(turno);
-                    soltarAzul(board, column);
-                    if (checkWinner(board) != false) {
+                    } else {
+                        soltarAzul(board, column);
+                        //  if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                            //Toast.makeText(MainActivity.this, R.string.blue_wins, Toast.LENGTH_SHORT).show();
-                            new cuadroDialogoAzul(contexto);
+                            new cuadroDialogAzul(contexto);
+                        //}
+
                     }
-                    turno = true;
+                }
+                else if(totalMovimientos == 0){
+                    new cuadroDialogEmpate(contexto);
                 }
             }
         };
@@ -433,6 +423,8 @@ startActivity(buton);
     public void soltarRoja(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                writeTurn(turno);
+                turno = !turno;
                 board[i][column] = 1;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_roja);
                 break;
@@ -443,6 +435,8 @@ startActivity(buton);
     public void soltarAzul(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                writeTurn(turno);
+                turno = !turno;
                 board[i][column] = 2;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_azul);
                 break;
@@ -466,7 +460,7 @@ startActivity(buton);
                     return true;
             }
         }
-        //Vertical i
+        //Vertical
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
                 if ((board[j][i] != 0)
