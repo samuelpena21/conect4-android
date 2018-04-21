@@ -17,5 +17,6 @@
         se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.
     </string>
     <string name="tie_game">Bueno, parece que es un empate....</string>
+    <string name="title_activity_computer">ComputerActivity</string>
 
 </resources>

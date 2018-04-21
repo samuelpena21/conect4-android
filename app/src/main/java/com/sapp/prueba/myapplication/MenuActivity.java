@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MenuActivity extends AppCompatActivity {
 Button jugar;
 Button info;
+Button maquina;
 MediaPlayer reproducir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,14 @@ info.setOnClickListener(new View.OnClickListener() {
             }
         });
 
-
+maquina = findViewById(R.id.button6);
+maquina.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(MenuActivity.this, ComputerActivity.class);
+        startActivity(intent);
+    }
+});
 
     //musica de fondo
         reproducir=MediaPlayer.create(this,R.raw.musica);
