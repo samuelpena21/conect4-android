@@ -8,13 +8,14 @@ import android.view.Window;
 import android.widget.Button;
 
 
-class cuadroDialogEmpate {
-    cuadroDialogEmpate(final Context contexto) {
+class DialogRojo {
+
+    DialogRojo(final Context contexto) {
 
         final Dialog dialogo = new Dialog(contexto);
         dialogo.setCancelable(false);
         dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogo.setContentView(R.layout.tie_game);
+        dialogo.setContentView(R.layout.redwin_dialog);
 
         Button refresh = dialogo.findViewById(R.id.button5);
         refresh.setOnClickListener(new View.OnClickListener() {

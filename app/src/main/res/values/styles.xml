@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MediumTextInfo">
+        <!-- Estilo para el tamaño del texto que aparece en la pantalla -->
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#f7f7f7</item>
+
+    </style>
+
 </resources>

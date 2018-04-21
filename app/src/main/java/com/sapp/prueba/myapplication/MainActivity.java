@@ -389,14 +389,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
 
                 if (totalMovimientos > 0) {
-                    totalMovimientos --;
+
 
                     if (turno) {
                         soltarRoja(board, column);
                         // if (checkWinner(board) != false) {
                         if (checkWinner(board)) {
 
-                            new cuadroDialogRojo(contexto);
+                            new DialogRojo(contexto);
 
                         }
 
@@ -406,13 +406,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         soltarAzul(board, column);
                         //  if (checkWinner(board) != false) {
                         if (checkWinner(board))
-                            new cuadroDialogAzul(contexto);
+                            new DialogAzul(contexto);
                         //}
 
                     }
                 }
                 else if(totalMovimientos == 0){
-                    new cuadroDialogEmpate(contexto);
+                    new DialogEmpate(contexto);
                 }
             }
         };
@@ -423,6 +423,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void soltarRoja(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                totalMovimientos --;
                 writeTurn(turno);
                 turno = !turno;
                 board[i][column] = 1;
@@ -435,6 +436,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void soltarAzul(int[][] board, int column) {
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
+                totalMovimientos --;
                 writeTurn(turno);
                 turno = !turno;
                 board[i][column] = 2;
