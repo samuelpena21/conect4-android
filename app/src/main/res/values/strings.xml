@@ -9,15 +9,13 @@
     <string name="Jugar">Jugar</string>
     <string name="titulo">CONNECTA 4</string>
     <string name="objetivo">Objetivo</string>
-    <string name="obje">El objetivo del juego es alinear las cuatro fichas en una rejilla de 6 filas y 7 columnas.
-        Cada jugador tiene 21 fichas de un color (azul o rojo).
-        Los jugadores ponen una ficha por turno en la columna que deseen,
-        la ficha cae en la posicion mas baja posible de la columna hasta llenarlos.
-        El ganador es aquel que hace la primera alineacion (horizontal, vertical o diagonal)
-        de 4 fichas de su color. si todos los espacios de la rejilla del juego
-        se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.</string>
+    <string name="obje">El objetivo del juego es alinear las cuatro fichas en una rejilla de 6 filas y 7 columnas. Cada jugador tiene 21 fichas de un color (azul o rojo).</string>
 
+    <string name="obje2">Los jugadores ponen una ficha por turno en la columna que deseen, la ficha cae en la posicion mas baja posible de la columna hasta llenarlos.</string>
 
+    <string name="obje3"> El ganador es aquel que hace la primera alineacion (horizontal, vertical o diagona) de 4 fichas de su color. si todos los espacios de la rejilla del juego
+        se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.
+    </string>
     <string name="tie_game">Bueno parece que es un empate....</string>
 
 </resources>
