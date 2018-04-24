@@ -8,60 +8,54 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
-Button jugar;
-Button info;
-Button maquina;
-MediaPlayer reproducir;
+    Button jugar;
+    Button info;
+    Button maquina;
+    MediaPlayer reproducir;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        //mostrar informacion
-info=findViewById(R.id.button4);
-info.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent info = new Intent(MenuActivity.this,Objetivo.class);
-        startActivity(info);
-    }
-});
-//Mostrar juego
-        jugar=findViewById(R.id.button3);
+
+        //Ir a pantalla de mostrar informacion de juego
+        info = findViewById(R.id.button4);
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent info = new Intent(MenuActivity.this, Objetivo.class);
+                startActivity(info);
+            }
+        });
+        //Ir a pantalla de juego
+        jugar = findViewById(R.id.button3);
         jugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jugar = new Intent(MenuActivity.this,MainActivity.class);
+                Intent jugar = new Intent(MenuActivity.this, MainActivity.class);
                 startActivity(jugar);
             }
         });
 
-maquina = findViewById(R.id.button6);
-maquina.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(MenuActivity.this, ComputerActivity.class);
-        startActivity(intent);
-    }
-});
-
-    //musica de fondo
-        reproducir=MediaPlayer.create(this,R.raw.musica);
+        //musica de fondo
+        reproducir = MediaPlayer.create(this, R.raw.musica);
         reproducir.setLooping(true);
-        reproducir.start();}
+        reproducir.start();
+    }
 
 
-        protected void onStop(){
+    protected void onStop() {
         super.onStop();
-         reproducir.pause();
-
-        }
-
-    protected void onRestart(){
-            super.onRestart();
-            reproducir.start();
+        reproducir.pause();
 
     }
 
-        }
+    protected void onRestart() {
+        super.onRestart();
+        reproducir.start();
+
+    }
+
+}
 
 

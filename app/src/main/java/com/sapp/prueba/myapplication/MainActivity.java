@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView txtInformacion; //muestra el turno del jugador en la parte de arriba de la pantalla
 
-    Button buton,btnhome;
+    Button newGameButton, btnHome;
     Context contexto;
 
 
@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView5_6 = findViewById(R.id.imageView5_6);
 
 
-        buton = findViewById(R.id.button);
-        btnhome = findViewById(R.id.botonhome);
+        newGameButton = findViewById(R.id.newGameButton);
+        btnHome = findViewById(R.id.botonhome);
         txtInformacion = findViewById(R.id.txtInformacion);
 
 
@@ -133,9 +133,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView5_4.setOnClickListener(this);
         imageView5_5.setOnClickListener(this);
         imageView5_6.setOnClickListener(this);
-        buton.setOnClickListener(this);
-        btnhome.setOnClickListener(this);
+        newGameButton.setOnClickListener(this);
+        btnHome.setOnClickListener(this);
 
+        //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
                 {imageView1_0, imageView1_1, imageView1_2, imageView1_3, imageView1_4, imageView1_5, imageView1_6},
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {imageView5_0, imageView5_1, imageView5_2, imageView5_3, imageView5_4, imageView5_5, imageView5_6}
         };
 
-
+        //Reproduce la musica del juego
         reproducir = MediaPlayer.create(this, R.raw.musica);
         reproducir.setLooping(true);
         reproducir.start();
@@ -362,9 +363,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 column = 6;
                 juego();
                 break;
-            case R.id.button:
-                Intent buton = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(buton);
+            case R.id.newGameButton:
+                juegoNuevo();
                 break;
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
@@ -390,29 +390,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (totalMovimientos > 0) {
 
-
                     if (turno) {
                         soltarRoja(board, column);
-                        // if (checkWinner(board) != false) {
+
                         if (checkWinner(board)) {
-
                             new DialogRojo(contexto);
-
+                            juegoNuevo();
                         }
-
-                        //  }
 
                     } else {
                         soltarAzul(board, column);
-                        //  if (checkWinner(board) != false) {
-                        if (checkWinner(board))
+                        if (checkWinner(board)) {
                             new DialogAzul(contexto);
-                        //}
+                            juegoNuevo();
+                        }
 
                     }
                 }
                 else if(totalMovimientos == 0){
                     new DialogEmpate(contexto);
+                    juegoNuevo();
                 }
             }
         };
@@ -511,6 +508,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             txtInformacion.setText(R.string.blue_turn);
         }
+
+    }
+    public void limpiarTablero(){
+
+        Runnable resetear = new Runnable() {
+            @Override
+            public void run() {
+                for(int i = 0; i<6; i++){
+                    for(int j =0; j<7; j++){
+                        if(board[i][j] != 0){
+                            board[i][j] =0;
+                            boardImagenes[i][j].setImageResource(0);
+                        }
+                    }
+                }
+            }
+        };
+        resetear.run();
+
+    }
+
+    public void juegoNuevo(){
+
+        totalMovimientos = 42;
+        limpiarTablero();
+        turno = false;
 
     }
 

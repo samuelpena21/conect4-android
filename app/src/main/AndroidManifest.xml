@@ -24,10 +24,6 @@
         <activity
             android:name=".Objetivo"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ComputerActivity"
-            android:label="@string/title_activity_computer"
-            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

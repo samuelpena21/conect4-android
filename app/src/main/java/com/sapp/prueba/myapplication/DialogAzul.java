@@ -20,8 +20,10 @@ class DialogAzul {
             @Override
             public void onClick(View view) {
                 dialogo.dismiss();
+                /*
                 Intent intent = new Intent(contexto,MainActivity.class);
                 contexto.startActivity(intent);
+                */
             }
         });
         dialogo.show();
