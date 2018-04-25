@@ -10,7 +10,6 @@ import android.widget.Button;
 public class MenuActivity extends AppCompatActivity {
     Button jugar;
     Button info;
-    Button maquina;
     MediaPlayer reproducir;
 
     @Override
