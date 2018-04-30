@@ -37,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         //musica de fondo
-        reproducir = MediaPlayer.create(this, R.raw.musica);
+        reproducir = MediaPlayer.create(this, R.raw.jazz);
         reproducir.setLooping(true);
         reproducir.start();
     }

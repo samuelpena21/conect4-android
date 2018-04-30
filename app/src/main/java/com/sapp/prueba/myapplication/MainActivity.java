@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
 
         //Reproduce la musica del juego
-        reproducir = MediaPlayer.create(this, R.raw.musica);
+        reproducir = MediaPlayer.create(this, R.raw.jazz);
         reproducir.setLooping(true);
         reproducir.start();
     }

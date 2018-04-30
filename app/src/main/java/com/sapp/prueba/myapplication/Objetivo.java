@@ -11,7 +11,7 @@ MediaPlayer reproducir;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_objetivo);
 
-        reproducir=MediaPlayer.create(this,R.raw.musica);
+        reproducir=MediaPlayer.create(this,R.raw.jazz);
         reproducir.setLooping(true);
         reproducir.start();}
     protected void onResume(){
