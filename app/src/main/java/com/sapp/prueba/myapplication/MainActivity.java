@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    MediaPlayer reproducir;
+    MediaPlayer reproducir, mp;
 
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView5_6.setOnClickListener(this);
         newGameButton.setOnClickListener(this);
         btnHome.setOnClickListener(this);
-
+mp = MediaPlayer.create(this, R.raw.boton);
         //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -175,201 +175,244 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageView0_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView0_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView0_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView0_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView0_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView0_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView0_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView1_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView1_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView1_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView1_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView1_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView1_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView1_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView2_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView2_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView2_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
 
 
             case R.id.imageView2_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView2_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView2_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView2_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView3_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView3_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView3_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView3_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView3_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView3_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView3_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView4_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView4_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView4_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView4_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView4_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView4_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView4_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView5_0:
                 column = 0;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView5_1:
                 column = 1;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView5_2:
                 column = 2;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView5_3:
                 column = 3;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView5_4:
                 column = 4;
                 juego();
+                mp.start();
                 break;
 
             case R.id.imageView5_5:
                 column = 5;
                 juego();
+                mp.start();
                 break;
             case R.id.imageView5_6:
                 column = 6;
                 juego();
+                mp.start();
                 break;
             case R.id.newGameButton:
                 juegoNuevo();
+                mp.start();
                 break;
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(btnhome);
-
+                mp.start();
                 break;
 
             default:
