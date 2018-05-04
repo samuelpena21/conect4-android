@@ -496,7 +496,6 @@ mp = MediaPlayer.create(this, R.raw.boton);
             for (int j = 0; j < 4; j++) {
                 if ((board[i][j] != 0)
                         && (board[i][j + 1] != 0)
-                        
                         && (board[i][j + 2] != 0)
                         && (board[i][j + 3] != 0)
                         && ((board[i][j] == board[i][j + 1])
