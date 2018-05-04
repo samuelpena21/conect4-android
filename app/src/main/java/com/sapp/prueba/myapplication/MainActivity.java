@@ -427,7 +427,8 @@ mp = MediaPlayer.create(this, R.raw.boton);
     //cambia las fichas de color
     public void juego() {
 
-        Runnable changeColor = new Runnable() {
+
+        final Runnable changeColor = new Runnable() {
             @Override
             public void run() {
 
@@ -438,21 +439,22 @@ mp = MediaPlayer.create(this, R.raw.boton);
 
                         if (checkWinner(board)) {
                             new DialogRojo(contexto);
-                            juegoNuevo();
+
+
                         }
 
                     } else {
                         soltarAzul(board, column);
                         if (checkWinner(board)) {
                             new DialogAzul(contexto);
-                            juegoNuevo();
+
                         }
 
                     }
                 }
                 else if(totalMovimientos == 0){
                     new DialogEmpate(contexto);
-                    juegoNuevo();
+
                 }
             }
         };
@@ -499,7 +501,9 @@ mp = MediaPlayer.create(this, R.raw.boton);
                         && ((board[i][j] == board[i][j + 1])
                         && (board[i][j + 1] == board[i][j + 2])
                         && (board[i][j + 2] == board[i][j + 3])))
+
                     return true;
+
             }
         }
         //Vertical
@@ -513,6 +517,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
                         && (board[j + 1][i] == board[j + 2][i])
                         && (board[j + 2][i] == board[j + 3][i])))
                     return true;
+
             }
         }
         //Diagonal de izquierdaaa a derechaaa
@@ -569,6 +574,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
             }
         };
         resetear.run();
+
 
     }
 
