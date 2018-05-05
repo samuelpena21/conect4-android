@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    MediaPlayer reproducir, mp;
+    MediaPlayer reproducir, mp, aplauso;
 
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         newGameButton.setOnClickListener(this);
         //btnHome.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.boton);
+        aplauso = MediaPlayer.create(this, R.raw.aplauso);
         //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -412,6 +413,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (checkWinner(board)) {
                             new DialogRojo(contexto);
                             txtInformacion.setText(R.string.red_wins);
+
+                            aplauso.start();
+
+
                         }
 
                     } else {
@@ -419,6 +424,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (checkWinner(board)) {
                             new DialogAzul(contexto);
                             txtInformacion.setText(R.string.blue_wins);
+                            aplauso.start();
                         }
 
                     }
