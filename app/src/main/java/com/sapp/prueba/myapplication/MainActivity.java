@@ -414,14 +414,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (checkWinner(board)) {
                             new DialogRojo(contexto);
                             txtInformacion.setText(R.string.red_wins);
-
                             aplauso.start();
-
-
                         }
 
                     } else {
                         soltarAzul(board, column);
+
                         if (checkWinner(board)) {
                             new DialogAzul(contexto);
                             txtInformacion.setText(R.string.blue_wins);
@@ -429,9 +427,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
-                //Si ya no quedan movimientos muestra el mensaje if (totalMovimientos == 0) {
-                    new DialogEmpate(contexto);
-                    boing.start();//juegoNuevo();}
+
+                    //Si ya no quedan movimientos muestra el mensaje
+                    if (totalMovimientos == 0) {
+                        new DialogEmpate(contexto);
+                        boing.start();
+                    }
                 }
             }
         };
