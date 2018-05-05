@@ -134,8 +134,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView5_5.setOnClickListener(this);
         imageView5_6.setOnClickListener(this);
         newGameButton.setOnClickListener(this);
-        btnHome.setOnClickListener(this);
-mp = MediaPlayer.create(this, R.raw.boton);
+        //btnHome.setOnClickListener(this);
+        mp = MediaPlayer.create(this, R.raw.boton);
         //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -404,7 +404,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
             @Override
             public void run() {
 
-                if (totalMovimientos > 0 && !checkWinner(board) ) {
+                if (totalMovimientos > 0 && !checkWinner(board)) {
 
                     if (turno) {
                         soltarRoja(board, column);
@@ -422,8 +422,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
                         }
 
                     }
-                }
-                else if(totalMovimientos == 0){
+                } else if (totalMovimientos == 0) {
                     new DialogEmpate(contexto);
                     //juegoNuevo();
                 }
@@ -437,7 +436,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
                 mp.start();
-                totalMovimientos --;
+                totalMovimientos--;
                 writeTurnInTextBox(turno);
                 turno = !turno;
                 board[i][column] = 1;
@@ -451,7 +450,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
         for (int i = 5; i >= 0; i--) {
             if (board[i][column] == 0) {
                 mp.start();
-                totalMovimientos --;
+                totalMovimientos--;
                 writeTurnInTextBox(turno);
                 turno = !turno;
                 board[i][column] = 2;
@@ -531,15 +530,15 @@ mp = MediaPlayer.create(this, R.raw.boton);
     }
 
 
-    public void limpiarTablero(){
+    public void limpiarTablero() {
 
         Runnable resetear = new Runnable() {
             @Override
             public void run() {
-                for(int i = 0; i<6; i++){
-                    for(int j =0; j<7; j++){
-                        if(board[i][j] != 0){
-                            board[i][j] =0;
+                for (int i = 0; i < 6; i++) {
+                    for (int j = 0; j < 7; j++) {
+                        if (board[i][j] != 0) {
+                            board[i][j] = 0;
                             boardImagenes[i][j].setImageResource(0);
                         }
                     }
@@ -550,7 +549,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
 
     }
 
-    public void juegoNuevo(){
+    public void juegoNuevo() {
 
         totalMovimientos = 42;
         limpiarTablero();
