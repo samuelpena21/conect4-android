@@ -1,20 +1,17 @@
 <resources>
-    <string name="app_name">Connect 4</string>
-    <string name="red_wins">Ha ganado el jugador Rojo</string>
-    <string name="blue_wins">Ha ganado el jugador Azul</string>
-    <string name="red_turn">turno del jugador Rojo</string>
-    <string name="blue_turn">turno del jugador Azul</string>
+    <string name="app_name">Connect  4</string>
+    <string name="red_turn">Red Turn</string>
+    <string name="blue_turn">Blue Turn</string>
     <string name="reset">Reset</string>
 
-    <string name="Jugar">Jugar</string>
-    <string name="titulo">CONNECTA 4</string>
-    <string name="objetivo">Objetivo</string>
-    <string name="obje">El objetivo del juego es alinear las cuatro fichas en una rejilla de 6 filas y 7 columnas. Cada jugador tiene 21 fichas de un color (azul o rojo).
-    Los jugadores ponen una ficha por turno en la columna que deseen, la ficha cae en la posicion mas baja posible de la columna hasta llenarlos.
-    El ganador es aquel que hace la primera alineacion (horizontal, vertical o diagona) de 4 fichas de su color. si todos los espacios de la rejilla del juego
-        se llenan y ningun jugdor ha logrado hacer una alineacion, el juego queda empate.</string>
+    <string name="Jugar">Play</string>
+    <string name="titulo">CONNECT  4</string>
+    <string name="objetivo">Objetive</string>
+    <string name="obje">The objective of the game is to align the four counters in a grid of 6 rows and 7 columns. Each player has 21 tiles of one color (blue or red). The players present a chip per turn in the column they wish, the chip falls in the lowest possible position of the column until they are filled. The winner is the one who makes the first alignment (horizontal, vertical or diagonal) of 4 tiles of their color. if all the spaces of the game grid took away and no player has managed to make an alignment, the game is tied.</string>
 
 
-    <string name="tie_game">Bueno parece que es un empate....</string>
+    <string name="tie_game">" Well it seems that it is a draw ...."</string>
+    <string name="blue_wins">Blue player wins</string>
+    <string name="red_wins">Red player wins</string>
 
 </resources>

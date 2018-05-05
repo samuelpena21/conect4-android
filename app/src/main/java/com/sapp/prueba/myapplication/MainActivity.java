@@ -402,7 +402,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
             @Override
             public void run() {
 
-                if (totalMovimientos > 0 && checkWinner(board) == false) {
+                if (totalMovimientos > 0 && checkWinner(board) ) {
 
                     if (turno) {
                         soltarRoja(board, column);

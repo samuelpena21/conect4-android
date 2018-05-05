@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Connect 4</string>
+    <string name="app_name">Connect  4</string>
     <string name="red_wins">Red player win</string>
-    <string name="blue_wins">Blue player win</string>
-    <string name="red_turn">Player 2 Turn</string>
-    <string name="blue_turn">Player 1 Turn</string>
+    <string name="blue_turn">Blue Turn</string>
     <string name="reset">Reset</string>
     <string name="Jugar">Play</string>
     <string name="titulo">CONNECT 4</string>
     <string name="objetivo">Objetive</string>
-    <string name="obje">The objective of the game is to align the four counters in a grid of 6 rows and 7 columns. Each player has 21 tiles of one color (blue or red).</string>
-    <string name="obje2">The players put a chip per turn in the column they want, the chip falls in the lowest possible position of the column until they are filled.</string>
-    <string name="obje3">The winner is the one who makes the first alignment (horizontal, vertical or diagonal) of 4 tiles of their color. if all the spaces of the game grid         they fill up and no player has managed to make an alignment, the game is tied.</string>
+    <string name="obje">The objective of the game is to align the four counters in a grid of 6 rows and 7 columns. Each player has 21 tiles of one color (blue or red). The players present a chip per turn in the column they wish, the chip falls in the lowest possible position of the column until they are filled. The winner is the one who makes the first alignment (horizontal, vertical or diagonal) of 4 tiles of their color. if all the spaces of the game grid took away and no player has managed to make an alignment, the game is tied.</string>
+    <string name="tie_game">" Well it seems that it is a draw ...."</string>
+    <string name="blue_wins">Blue player wins</string>
+    <string name="red_turn">Red Turn</string>
 </resources>
