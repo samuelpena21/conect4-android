@@ -1,7 +1,7 @@
 package com.sapp.prueba.myapplication;
 
 import android.content.Context;
-import android.content.Intent;
+//import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView txtInformacion; //muestra el turno del jugador en la parte de arriba de la pantalla
 
-    Button newGameButton, btnHome;
+    Button newGameButton;
     Context contexto;
 
 
