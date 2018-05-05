@@ -1,7 +1,7 @@
 package com.sapp.prueba.myapplication;
 
 import android.content.Context;
-import android.content.Intent;
+//import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    MediaPlayer reproducir, mp;
+    MediaPlayer reproducir, mp, aplauso,boing;
 
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView txtInformacion; //muestra el turno del jugador en la parte de arriba de la pantalla
 
-    Button newGameButton, btnHome;
+    Button newGameButton;
     Context contexto;
 
 
@@ -136,6 +136,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         newGameButton.setOnClickListener(this);
         //btnHome.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.boton);
+        aplauso = MediaPlayer.create(this, R.raw.aplauso);
+        boing = MediaPlayer.create(this,R.raw.boing);
         //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -412,6 +414,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (checkWinner(board)) {
                             new DialogRojo(contexto);
                             txtInformacion.setText(R.string.red_wins);
+
+                            aplauso.start();
+
+
                         }
 
                     } else {
@@ -419,14 +425,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (checkWinner(board)) {
                             new DialogAzul(contexto);
                             txtInformacion.setText(R.string.blue_wins);
+                            aplauso.start();
                         }
 
                     }
-                    //Si ya no quedan movimientos muestra el mensaje
-                    if (totalMovimientos == 0) {
-                        new DialogEmpate(contexto);
-                        //juegoNuevo();
-                    }
+                //Si ya no quedan movimientos muestra el mensaje if (totalMovimientos == 0) {
+                    new DialogEmpate(contexto);
+                    boing.start();//juegoNuevo();}
                 }
             }
         };
