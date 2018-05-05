@@ -431,6 +431,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //Si ya no quedan movimientos muestra el mensaje
                     if (totalMovimientos == 0) {
                         new DialogEmpate(contexto);
+                        txtInformacion.setText(R.string.tie);
                         boing.start();
                     }
                 }

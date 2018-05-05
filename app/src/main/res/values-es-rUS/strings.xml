@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Conecta 4</string>
     <string name="objetivo">Objetivo</string>
-    <string name="tie_game">Bueno parece que es un empate....</string>
+    <string name="tie_game">Bueno, parece que es un empate....</string>
     <string name="obje">El objetivo del juego es alinear los cuatro contadores en una grilla de 6 filas y 7 columnas. Cada jugador tiene 21 fichas de un color (azul o rojo). Los jugadores presentan un chip por turno en la columna que desean, el chip cae en la posición más baja posible de la columna hasta que se llenan. El ganador es el que hace la primera alineación (horizontal, vertical o diagonal) de 4 fichas de su color. si todos los espacios de la grilla del juego se llevó y ningún jugador ha logrado hacer una alineación, el juego está empatado.</string>
     <string name="titulo">CONECTA 4</string>
     <string name="Jugar">Jugar</string>
@@ -11,4 +11,5 @@
     <string name="blue_wins">Ha ganado el jugador Azul</string>
     <string name="red_turn">Turno del Rojo</string>
     <string name="red_wins">Ha ganado el jugador Rojo</string>
+    <string name="empate">Empate</string>
 </resources>

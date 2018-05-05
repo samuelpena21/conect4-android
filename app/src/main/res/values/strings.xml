@@ -13,5 +13,6 @@
     <string name="tie_game">" Well it seems that it is a draw ...."</string>
     <string name="blue_wins">Blue player wins</string>
     <string name="red_wins">Red player wins</string>
+    <string name="tie">Tie</string>
 
 </resources>
