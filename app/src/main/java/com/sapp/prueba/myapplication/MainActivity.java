@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         newGameButton = findViewById(R.id.newGameButton);
-        btnHome = findViewById(R.id.botonhome);
+        //btnHome = findViewById(R.id.botonhome);
         txtInformacion = findViewById(R.id.txtInformacion);
 
 
@@ -380,11 +380,13 @@ mp = MediaPlayer.create(this, R.raw.boton);
                 mp.start();
                 break;
 
+            /*
             case R.id.botonhome:
                 Intent btnhome = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(btnhome);
                 mp.start();
                 break;
+                */
 
             default:
                 //o\  /
@@ -402,21 +404,21 @@ mp = MediaPlayer.create(this, R.raw.boton);
             @Override
             public void run() {
 
-                if (totalMovimientos > 0 && checkWinner(board) ) {
+                if (totalMovimientos > 0 && !checkWinner(board) ) {
 
                     if (turno) {
                         soltarRoja(board, column);
 
                         if (checkWinner(board)) {
                             new DialogRojo(contexto);
-                            //juegoNuevo();
+                            txtInformacion.setText(R.string.red_wins);
                         }
 
                     } else {
                         soltarAzul(board, column);
                         if (checkWinner(board)) {
                             new DialogAzul(contexto);
-                            //juegoNuevo();
+                            txtInformacion.setText(R.string.blue_wins);
                         }
 
                     }
@@ -436,7 +438,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
             if (board[i][column] == 0) {
                 mp.start();
                 totalMovimientos --;
-                writeTurn(turno);
+                writeTurnInTextBox(turno);
                 turno = !turno;
                 board[i][column] = 1;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_roja);
@@ -450,7 +452,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
             if (board[i][column] == 0) {
                 mp.start();
                 totalMovimientos --;
-                writeTurn(turno);
+                writeTurnInTextBox(turno);
                 turno = !turno;
                 board[i][column] = 2;
                 boardImagenes[i][column].setImageResource(R.drawable.ficha_azul);
@@ -517,7 +519,7 @@ mp = MediaPlayer.create(this, R.raw.boton);
         return false;
     }
 
-    public void writeTurn(boolean turno) {
+    public void writeTurnInTextBox(boolean turno) {
 
         if (!turno) {
             txtInformacion.setText(R.string.red_turn);
@@ -527,6 +529,8 @@ mp = MediaPlayer.create(this, R.raw.boton);
         }
 
     }
+
+
     public void limpiarTablero(){
 
         Runnable resetear = new Runnable() {
@@ -551,6 +555,8 @@ mp = MediaPlayer.create(this, R.raw.boton);
         totalMovimientos = 42;
         limpiarTablero();
         turno = false;
+        txtInformacion.setText(R.string.blue_turn);
+
 
     }
 
