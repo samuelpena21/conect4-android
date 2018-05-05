@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    MediaPlayer reproducir, mp, aplauso;
+    MediaPlayer reproducir, mp, aplauso,boing;
 
 
     ImageView imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6,
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //btnHome.setOnClickListener(this);
         mp = MediaPlayer.create(this, R.raw.boton);
         aplauso = MediaPlayer.create(this, R.raw.aplauso);
+        boing = MediaPlayer.create(this,R.raw.boing);
         //Asigna cada imagen al array bidimensional de imagenes
         boardImagenes = new ImageView[][]{
                 {imageView0_0, imageView0_1, imageView0_2, imageView0_3, imageView0_4, imageView0_5, imageView0_6},
@@ -430,6 +431,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 } else if (totalMovimientos == 0) {
                     new DialogEmpate(contexto);
+                    boing.start();
                     //juegoNuevo();
                 }
             }
