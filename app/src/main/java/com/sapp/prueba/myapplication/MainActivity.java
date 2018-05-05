@@ -422,9 +422,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
-                } else if (totalMovimientos == 0) {
-                    new DialogEmpate(contexto);
-                    //juegoNuevo();
+                    //Si ya no quedan movimientos muestra el mensaje
+                    if (totalMovimientos == 0) {
+                        new DialogEmpate(contexto);
+                        //juegoNuevo();
+                    }
                 }
             }
         };
