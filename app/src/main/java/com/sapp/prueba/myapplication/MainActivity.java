@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //Implentacion de los anuncios
-        MobileAds.initialize(this, "ca-app-pub-3736686838293972/8868582803");
+        MobileAds.initialize(this, "ca-app-pub-3736686838293972~2383661310");
         adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
