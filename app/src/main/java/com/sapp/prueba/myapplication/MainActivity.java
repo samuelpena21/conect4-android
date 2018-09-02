@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer reproducir, mp, aplauso,boing;
 
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button newGameButton;
     Context contexto;
+    AdView adView;
 
 
     boolean turno = false; //variable que controla el turno del jugador: si es false es azul. si es true roja.
@@ -37,6 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Implentacion de los anuncios
+        MobileAds.initialize(this, "ca-app-pub-3736686838293972/8868582803");
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         contexto = this;
         //Referencia de todos los ImageVIews del cuadro

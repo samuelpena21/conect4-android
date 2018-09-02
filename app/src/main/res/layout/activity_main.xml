@@ -13,7 +13,7 @@
         android:layout_height="62dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
 
         android:background="@drawable/reload"
         app:layout_constraintEnd_toEndOf="parent"
@@ -485,6 +485,17 @@
 
 
     </GridLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3736686838293972/8868582803"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
