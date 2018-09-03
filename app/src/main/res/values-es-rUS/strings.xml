@@ -11,5 +11,5 @@
     <string name="blue_wins">Ha ganado el jugador Azul</string>
     <string name="red_turn">Turno del Rojo</string>
     <string name="red_wins">Ha ganado el jugador Rojo</string>
-    <string name="empate">Empate</string>
+    <string name="tie">Empate</string>
 </resources>
